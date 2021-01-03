@@ -41,6 +41,9 @@ import sslider1 from "../src/assets/sslider1.png"
 import sslider2 from "../src/assets/sslider2.png"
 import sslider3 from "../src/assets/sslider3.png"
 import sslider4 from "../src/assets/sslider4.png"
+import Container from "react-bootstrap/Container"
+
+import './Home.css'
 
 
 
@@ -124,6 +127,7 @@ const Home = () => {
             </AppBar>
 
             <TabPanel value={value} index={0} dir={theme.direction}>
+                {/* <div  className="heroSlider"> */}
                 <Carousel
                     autoPlay
                     showThumbs={false}
@@ -131,50 +135,51 @@ const Home = () => {
                     swipeable
                     emulateTouch
                     infiniteLoop
-                    showStatus={false}
+                   showStatus={false}
                     showArrows={false}
                     interval={2000}
-                    swipeScrollTolerance={3}
-                    centerMode
-                    centerSlidePercentage={120}
+                   swipeScrollTolerance={3}
+                   centerMode
+                   centerSlidePercentage={120}
                   
                 >
                     <div>
                         <img
+                            // className = "heroImage"
                             src={slider1}
                             alt="img1"
-                            style={{height: "50%"}}
                         />
                     </div>
                     <div>
                         <img
+                        //   className = "heroImage"
                             src={slider2}
                             alt="img1"
-                            style={{height: "50%"}}
                         />
                     </div>
                     <div >
                         <img
+                        //   className = "heroImage"
                             src={slider3}
                             alt="img1"
-                            style={{height: "50%"}}
                         />
                     </div>
                     <div>
                         <img
+                        //   className = "heroImage"
                             src={slider4}
                             alt="img1"
-                            style={{height: "50%"}}
                         />
                     </div>
                     <div>
                         <img
+                        //  className = "heroImage"
                             src={slider5}
                             alt="img1"
-                            style={{height: "50%"}}
                         />
                     </div>
                 </Carousel>
+                {/* </div> */}
                 {/* <Typography variant="h3" align="center" className={classes.whiteText}>
             Game-Pitara Top Games
           </Typography> */}
@@ -185,9 +190,10 @@ const Home = () => {
           Go for the Scratch!
         </Typography>
          <Grid container style={{ marginTop: 15, padding: 15, marginBottom: 5 }}>
-          <Grid item xs={12} sm={6} style={{ padding: 20 }}>
+          <Grid item  xs={12} sm={6} style={{ padding: 10 }} >
+              <div className="smallCarouselLeft">
             <Carousel
-              autoPlay
+             autoPlay
               showThumbs={false}
               stopOnHover
               swipeable
@@ -198,12 +204,14 @@ const Home = () => {
               showArrows={false}
               interval={2000}
               swipeScrollTolerance={3}
-            //   centerMode
-            //   centerSlidePercentage={120}
+              centerMode
+              centerSlidePercentage={120}
+              className="smallCarousel"
              
             >
               <div>
                 <img
+                    className="smallSliderImage"
                   src={sslider1}
                   alt="img1"
                 />
@@ -216,8 +224,10 @@ const Home = () => {
               </div>
             
             </Carousel>
+            </div>
           </Grid>
-          <Grid item xs={12} sm={6} style={{ padding: 20, }}>
+          <Grid item xs={12} sm={6} style={{ padding: 10 }} >
+              <div className="smallCarouselRight" >
             <Carousel
               autoPlay
               showThumbs={false}
@@ -230,8 +240,9 @@ const Home = () => {
               showArrows={false}
               interval={2000}
               swipeScrollTolerance={3}
-            //   centerMode
-            //   centerSlidePercentage={120}
+              centerMode
+              centerSlidePercentage={120}
+              className="smallCarousel"
               
              
             >
@@ -254,6 +265,7 @@ const Home = () => {
               </div>
               
             </Carousel>
+            </div>
           </Grid>
         </Grid>
         <Typography variant="h5" align="center" className={classes.whiteText}> Why GamePitara ?{" "} </Typography>

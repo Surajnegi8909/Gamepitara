@@ -1,0 +1,34 @@
+.smallCarousel .carousel .slide { 
+    background: none !important;
+}
+
+.smallCarouselLeft {
+    background-color: #3d3a32;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.smallCarouselRight {
+    background-color: #562daa;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.smallCarousel .carousel .slider-wrapper {
+    border-radius: 20px;
+}
+
+.heroSlider {
+    height: 200px;
+    position: relative;
+    overflow: auto;
+    background-size: cover;
+    display: flex;
+}
+
+.heroImage {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
