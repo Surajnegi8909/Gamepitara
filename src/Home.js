@@ -269,7 +269,11 @@ const Home = () => {
           </Grid>
         </Grid>
         <Typography variant="h5" align="center" className={classes.whiteText}> Why GamePitara ?{" "} </Typography>
-        <Grid container style={{ marginTop: 15, padding: 15, marginBottom: 5 }}> <img src={h1} height={300} style={{ paddingLeft: 20, paddingRight: 20, borderRadius: "10%" }} /> <img src={h2} height={300} style={{ paddingLeft: 20, paddingRight: 20, borderRadius: "10%" }} /> <img src={h3} height={300} style={{ paddingLeft: 20, paddingRight: 20, borderRadius: "10%" }} /> <img src={h4} height={300} style={{ paddingLeft: 20, paddingRight: 20, borderRadius: "10%" }} /> </Grid>
+        <Grid container style={{ marginTop: 15, padding: 15, marginBottom: 5 }}> 
+        <img src={h1} height={300}  style={{ paddingLeft: 20, paddingRight: 20, borderRadius: "10%" }} /> 
+        <img src={h2} height={300} style={{ paddingLeft: 20, paddingRight: 20, borderRadius: "10%" }} /> 
+        <img src={h3} height={300} style={{ paddingLeft: 20, paddingRight: 20, borderRadius: "10%" }} /> 
+        <img src={h4} height={300} style={{ paddingLeft: 20, paddingRight: 20, borderRadius: "10%" }} /> </Grid>
         <Typography variant="h5" align="center" className={classes.whiteText}>
           Hold Your Breath GamePitara is under maintaince and soon we will be
           launching with these games{" "}

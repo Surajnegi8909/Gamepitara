@@ -1,11 +1,19 @@
 import Container from "@material-ui/core/Container";
-import { Box } from "@material-ui/core";
-
+import { Box, Divider } from "@material-ui/core";
+import {
+    FacebookIcon,TelegramIcon,
+    TwitterIcon,  EmailIcon,WhatsappIcon,
+    PinterestIcon} from 'react-share';
+    import Slider from "react-slick";
+    import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Grid from "@material-ui/core/Grid";
 import Link from "@material-ui/core/Link";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import React from "react";
+import './footer.css';
+
 import logo from "./logo.png";
 import p1 from "./paymentmethods/p1.png";
 import p2 from "./paymentmethods/p2.png";
@@ -19,22 +27,23 @@ import g1 from "./gameproviders/g1.png";
 import g2 from "./gameproviders/g2.png";
 import g3 from "./gameproviders/g3.png";
 import g4 from "./gameproviders/g4.jpg";
-import {
-  Facebook,
-  Instagram,
-  Twitter,
-  Pinterest,
-  Mail,
-} from "@material-ui/icons";
+import g5 from "./gameproviders/g5.png";
+import g6 from "./gameproviders/g6.jpg";
+import g7 from "./gameproviders/g7.jpg";
+import g8 from "./gameproviders/g8.jpg";
+import g9 from "./gameproviders/g9.png";
+import g10 from "./gameproviders/g10.png";
+import g11 from "./gameproviders/g11.png";
+import g12 from "./gameproviders/g12.jpg";
+import g13 from "./gameproviders/g13.png";
+import p18 from "./gameproviders/18+.png";
+import iosandroid from "./assets/iosandroid.png";
+
 
 function Copyright() {
   return (
     <React.Fragment>
-      {"© "}
-      <Link color="inherit" href="https://www.gamepitara.com">
-        2021 Game Pitara Pvt Ltd
-      </Link>{" "}
-      {new Date().getFullYear()}
+    
     </React.Fragment>
   );
 }
@@ -53,8 +62,16 @@ const useStyles = makeStyles((theme) => ({
     
    
   },
+  buItem:{
+    paddingTop: theme.spacing(1),
+    fontSize: "14px", color: "#8f99a3",
+  },
+  bbItem:{
+    paddingBottom: theme.spacing(1),
+    fontSize: "14px", color: "#8f99a3",
+  },
   iconsWrapper: {
-    height: 120,
+    height: 150,
   },
   icons: {
     display: "flex",
@@ -92,11 +109,44 @@ const useStyles = makeStyles((theme) => ({
   whiteText: {
     color: "white",
   },
+  copyrht:{
+    color: "white",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+ 
 }));
 
 export default function AppFooter() {
   const classes = useStyles();
+  
+  const settings = {
+    infinite: true,
+    slidesToShow: 7,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    arrows: false,
+    autoplaySpeed: 1500,
+    cssEase: "ease-out",
+    responsive: [
+      {
+      breakpoint:600,
+      settings:{
+        slidesToShow: 3,
 
+      }   
+    },
+    {
+      breakpoint:480,
+      settings:{
+        slidesToShow: 2,
+
+      },
+    }
+  ]
+  };
   return (
     <>
       <Typography
@@ -113,10 +163,18 @@ export default function AppFooter() {
                 className={classes.iconsWrapper}
                 spacing={2}
               >
+               <Grid container>
+                <ul className={classes.list}><li>
                 <Grid item className={classes.icons}>
                   <Link href="#">
-                    <img src={logo} width={200} alt="logo" />
+                    <img src={logo} width={220} alt="logo" />
                   </Link>
+                  </Grid>
+                  </li>
+                    <li className={classes.buItem}>Asia's Best Online Casino Slot &</li>
+                    <li className={classes.bbItem}> Live Games</li>
+                    <li><img src={p18} width={40} height={40} alt="logo" /> Be Responsible</li>
+                  </ul>
                 </Grid>
                 <Grid item>
                   <Copyright />
@@ -187,32 +245,77 @@ export default function AppFooter() {
                 Get In Touch
               </Typography>
               <Grid container justify="space-between">
-                <Facebook />
-                <Instagram />
-                <Mail />
+                <FacebookIcon className="socialicon" size={48} round={true} />
+                <EmailIcon className="socialicon"  size={48} round={true} />
+                <TwitterIcon className="socialicon"  size={48} round={true} />
+                <PinterestIcon className="socialicon"  size={48} round={true}/>
+                <WhatsappIcon  className="socialicon"  size={48} round={true} />
+                                <TelegramIcon  className="socialicon"  size={48} round={true} />
               </Grid>
             </Grid>
           </Grid>
         </Container>
       </Typography>
-      <Box>
+      <Box style={{ paddingBottom:20}}>
         <Grid container justify="space-around">
-          <Grid item xs={12}>
-            <Typography
+          <Grid item xs={12}  style={{ paddingBottom:15 }}>
+            <Typography 
               variant="h5"
               className={classes.whiteText}
-              align="center"
-            >
+              align="center" >
               GAME PROVIDERS
             </Typography>
           </Grid>
-          <img src={g1} height={40} style={{ margin: 20 }} />
-          <img src={g2} height={40} style={{ margin: 20 }} />
-          <img src={g3} height={40} style={{ margin: 20 }} />
-          <img src={g4} height={40} style={{ margin: 20 }} />
+        
         </Grid>
       </Box>
-      <Box>
+      <Grid >
+      <div className="App" style={{paddingBottom:15, alignItems:"center"}}>
+      <Slider {...settings}>
+      <div>
+          <img src={g1} height={40}  />
+          </div>
+          <div >
+          <img src={g2} height={40} />
+          </div>
+          <div >
+          <img src={g3} height={40} />
+          </div>
+          <div>
+          <img src={g4} height={40} />
+          </div>
+          <div>
+          <img src={g5} height={40}  />
+          </div>
+          <div >
+          <img src={g6} height={40} />
+          </div>
+          <div >
+          <img src={g7} height={40}  />
+          </div>
+          <div >
+          <img src={g8} height={40} />
+          </div>
+          <div>
+          <img src={g9} height={40} />
+          </div>
+          <div >
+          <img src={g10} height={40} />
+          </div>
+          <div >
+          <img src={g11} height={40} />
+          </div>
+          <div >
+          <img src={g12} height={40} />
+          </div>
+          <div >
+          <img src={g13} height={40} />
+          </div>
+      </Slider>
+    </div>
+   
+    </Grid>
+      <Box  style={{ paddingBottom:20}}>
         <Grid container justify="space-around">
           <Grid item xs={12}>
             <Typography
@@ -229,8 +332,23 @@ export default function AppFooter() {
           <img src={p4} height={40} style={{ margin: 20 }} />
           <img src={p5} height={40} style={{ margin: 20 }} />
           <img src={p6} height={40} style={{ margin: 20 }} />
+          <img src={p7} height={40} style={{ margin: 20 }} />
+          <img src={p8} height={40} style={{ margin: 20 }} />
+          {/* <img src={iosandroid} height={120} width={180} ></img> */}
         </Grid>
       </Box>
+      {/* <div  style={{ display: "block",justifyContent: "end",alignItems: "end", height:40}}>
+      <img src={iosandroid} height={50} ></img>
+      </div> */}
+      
+      <div className={classes.copyrht} style={{backgroundColor:"#232323",justifyContent: "center",alignItems: "center", height:40}} >
+       {"   "}
+     © 2021 Game Pitara Pvt Ltd
+      {" "}
+      {new Date().getFullYear()}
+ 
+      </div>
+        
     </>
   );
 }

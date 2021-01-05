@@ -1,0 +1,8 @@
+.socialicon {
+  margin-bottom: 15px;
+}
+
+.socialicon:hover {
+  background-color: aliceblue;
+  border-radius: 10px;
+}
